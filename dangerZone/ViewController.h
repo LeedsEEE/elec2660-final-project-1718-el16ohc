@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *longitudeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *latitudeTextField;
+- (IBAction)goButton:(id)sender;
 
 @end
 

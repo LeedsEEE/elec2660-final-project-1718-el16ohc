@@ -26,4 +26,9 @@
 }
 
 
+- (IBAction)goButton:(id)sender {
+    NSLog(@"Longitude - %@", self.longitudeTextField.text);
+    NSLog(@"Latitude - %@", self.latitudeTextField.text);
+}
+
 @end
