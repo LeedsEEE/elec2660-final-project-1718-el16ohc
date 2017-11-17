@@ -31,4 +31,20 @@
     NSLog(@"Latitude - %@", self.latitudeTextField.text);
 }
 
+- (IBAction)backgroundPressed:(id)sender {
+    if ([self.longitudeTextField isFirstResponder]) {
+        [self.longitudeTextField resignFirstResponder];
+    }
+    if ([self.longitudeTextField isFirstResponder]) {
+        [self.longitudeTextField resignFirstResponder];
+    }
+}
+
+# pragma mark Text Field Delegate Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 @end

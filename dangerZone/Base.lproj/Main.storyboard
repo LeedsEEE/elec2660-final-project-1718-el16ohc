@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -74,6 +74,9 @@
                             <constraint firstItem="CO3-W2-dY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="wJY-A3-HDz"/>
                             <constraint firstItem="CO3-W2-dY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="z3u-mb-SW7"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u5w-5t-mFn"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="latitudeTextField" destination="0Sq-4L-udj" id="EZP-CG-gtZ"/>

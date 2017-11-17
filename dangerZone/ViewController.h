@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *longitudeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *latitudeTextField;
 - (IBAction)goButton:(id)sender;
+- (IBAction)backgroundPressed:(id)sender;
 
 @end
 
