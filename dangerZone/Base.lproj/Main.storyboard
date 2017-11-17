@@ -56,6 +56,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYu-vQ-pLq"/>
+                                    <segue destination="Gr5-bH-boI" kind="show" identifier="goSegue" id="7IQ-Qr-bMZ"/>
                                 </connections>
                             </button>
                         </subviews>
