@@ -19,18 +19,13 @@
     self.map.hidden = true;
     self.mapButton.hidden = true;
     self.closeButton.hidden = true;
-
-
     // Do any additional setup after loading the view, typically from a nib.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (IBAction)goButton:(id)sender {
     NSLog(@"Longitude - %@", self.longitudeTextField.text);
@@ -38,10 +33,9 @@
     self.longitude = [self.longitudeTextField.text doubleValue];
     self.latitude = [self.latitudeTextField.text doubleValue];
     CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-    CLLocationCoordinate2D locationCoords = location.coordinate;
-    self.map.region = MKCoordinateRegionMake(locationCoords, MKCoordinateSpanMake(0.01, 0.01));
-//    MKCircle *circle = [MKCircle circleWithCenterCoordinate:locationCoords radius:100];
-//    [self.map addOverlay:circle level:MKOverlayLevelAboveRoads];
+    self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.01, 0.01));
+    MKCircle *circle = [MKCircle circleWithCenterCoordinate:location.coordinate radius:100];
+    [self.map addOverlay:circle level:MKOverlayLevelAboveRoads];
     self.map.hidden = false;
     self.mapButton.hidden = false;
     self.closeButton.hidden = false;
@@ -82,7 +76,6 @@
     self.closeButton.hidden = true;
 }
 
-
 # pragma mark Text Field Delegate Methods
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -90,13 +83,13 @@
     return YES;
 }
 
-//- (MKOverlayRenderer *)mapView:(MKMapView *)map viewForOverlay:(id <MKOverlay>)overlay
-//{
-//    MKCircleRenderer *circleView = [[MKCircleRenderer alloc] initWithOverlay:overlay];
-//    circleView.strokeColor = [UIColor redColor];
-//    circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.4];
-//    return circleView;
-//}
+- (MKOverlayRenderer *)mapView:(MKMapView *)map viewForOverlay:(id <MKOverlay>)overlay
+{
+    MKCircleRenderer *circleView = [[MKCircleRenderer alloc] initWithOverlay:overlay];
+    circleView.strokeColor = [UIColor redColor];
+    circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0];
+    return circleView;
+}
 
 // https://stackoverflow.com/questions/9056451/draw-a-circle-of-1000m-radius-around-users-location-in-mkmapview
 
