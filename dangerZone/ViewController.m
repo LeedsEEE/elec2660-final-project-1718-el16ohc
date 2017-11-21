@@ -87,7 +87,7 @@
 {
     MKCircleRenderer *circleView = [[MKCircleRenderer alloc] initWithOverlay:overlay];
     circleView.strokeColor = [UIColor redColor];
-    circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0];
+    circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
     return circleView;
 }
 
