@@ -8,13 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *longitudeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *latitudeTextField;
+@property (weak, nonatomic) IBOutlet MKMapView *map;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *mapButton;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+
 - (IBAction)goButton:(id)sender;
 - (IBAction)backgroundPressed:(id)sender;
+- (IBAction)mapButton:(id)sender;
+- (IBAction)closeButton:(id)sender;
 
 @end
 
