@@ -41,7 +41,7 @@
     CLLocationCoordinate2D locationCoords = location.coordinate;
     self.map.region = MKCoordinateRegionMake(locationCoords, MKCoordinateSpanMake(0.01, 0.01));
 //    MKCircle *circle = [MKCircle circleWithCenterCoordinate:locationCoords radius:100];
-//    [self.map addOverlay:circle];
+//    [self.map addOverlay:circle level:MKOverlayLevelAboveRoads];
     self.map.hidden = false;
     self.mapButton.hidden = false;
     self.closeButton.hidden = false;
@@ -57,7 +57,24 @@
 }
 
 - (IBAction)mapButton:(id)sender {
+
+    switch (((UISegmentedControl *) sender).selectedSegmentIndex) {
+        case 0:
+            self.map.mapType = MKMapTypeStandard ;
+            break;
+        case 1:
+            self.map.mapType = MKMapTypeSatellite ;
+            break;
+        case 2:
+            self.map.mapType = MKMapTypeHybrid ;
+            break;
+            
+        default:
+            break;
+    }
 }
+
+// https://stackoverflow.com/questions/20591345/apple-mapkit-map-style-implement-style-change-using-segmented-controller
 
 - (IBAction)closeButton:(id)sender {
     self.map.hidden = true;
@@ -80,5 +97,7 @@
 //    circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.4];
 //    return circleView;
 //}
+
+// https://stackoverflow.com/questions/9056451/draw-a-circle-of-1000m-radius-around-users-location-in-mkmapview
 
 @end
