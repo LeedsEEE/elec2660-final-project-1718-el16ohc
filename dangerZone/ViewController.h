@@ -10,13 +10,15 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *longitudeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *latitudeTextField;
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *mapButton;
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
+@property CLLocationDegrees longitude;
+@property CLLocationDegrees latitude;
 
 - (IBAction)goButton:(id)sender;
 - (IBAction)backgroundPressed:(id)sender;
