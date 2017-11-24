@@ -36,7 +36,7 @@
     self.longitude = [self.longitudeTextField.text doubleValue];
     self.latitude = [self.latitudeTextField.text doubleValue];
     CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-    self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.01, 0.01));
+    self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
     MKCircle *pistol = [MKCircle circleWithCenterCoordinate:location.coordinate radius:25];
     [self.map addOverlay:pistol level:MKOverlayLevelAboveRoads];
     MKCircle *sa80 = [MKCircle circleWithCenterCoordinate:location.coordinate radius:300];
