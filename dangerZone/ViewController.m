@@ -19,6 +19,9 @@
     self.map.hidden = true;
     self.mapButton.hidden = true;
     self.closeButton.hidden = true;
+    self.map.delegate = self;
+    
+// https://stackoverflow.com/questions/36492112/mapkit-overlay-does-not-appear
     // Do any additional setup after loading the view, typically from a nib.
 }
 
