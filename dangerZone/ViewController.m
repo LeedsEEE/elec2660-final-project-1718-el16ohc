@@ -37,8 +37,22 @@
     self.latitude = [self.latitudeTextField.text doubleValue];
     CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
     self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.01, 0.01));
-    MKCircle *circle = [MKCircle circleWithCenterCoordinate:location.coordinate radius:100];
-    [self.map addOverlay:circle level:MKOverlayLevelAboveRoads];
+    MKCircle *pistol = [MKCircle circleWithCenterCoordinate:location.coordinate radius:25];
+    [self.map addOverlay:pistol level:MKOverlayLevelAboveRoads];
+    MKCircle *sa80 = [MKCircle circleWithCenterCoordinate:location.coordinate radius:300];
+    [self.map addOverlay:sa80 level:MKOverlayLevelAboveRoads];
+    MKCircle *lmg = [MKCircle circleWithCenterCoordinate:location.coordinate radius:400];
+    [self.map addOverlay:lmg level:MKOverlayLevelAboveRoads];
+    MKCircle *lsm = [MKCircle circleWithCenterCoordinate:location.coordinate radius:500];
+    [self.map addOverlay:lsm level:MKOverlayLevelAboveRoads];
+    MKCircle *l12a1 = [MKCircle circleWithCenterCoordinate:location.coordinate radius:600];
+    [self.map addOverlay:l12a1 level:MKOverlayLevelAboveRoads];
+    MKCircle *lsw = [MKCircle circleWithCenterCoordinate:location.coordinate radius:800];
+    [self.map addOverlay:lsw level:MKOverlayLevelAboveRoads];
+    MKCircle *rpg7 = [MKCircle circleWithCenterCoordinate:location.coordinate radius:925];
+    [self.map addOverlay:rpg7 level:MKOverlayLevelAboveRoads];
+    MKCircle *l115a3 = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1000];
+    [self.map addOverlay:l115a3 level:MKOverlayLevelAboveRoads];
     self.map.hidden = false;
     self.mapButton.hidden = false;
     self.closeButton.hidden = false;
@@ -89,8 +103,8 @@
 - (MKOverlayRenderer *)mapView:(MKMapView *)map viewForOverlay:(id <MKOverlay>)overlay
 {
     MKCircleRenderer *circleView = [[MKCircleRenderer alloc] initWithOverlay:overlay];
-    circleView.strokeColor = [UIColor redColor];
-    circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
+//    circleView.strokeColor = [UIColor redColor];
+    circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.1];
     return circleView;
 }
 
