@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ah1-n9-sbH">
-                                <frame key="frameInset" minX="162" minY="419" width="50" height="30"/>
+                                <frame key="frameInset" minX="162" minY="523" width="50" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Go">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,6 +74,9 @@
                                     <action selector="mapButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="0i5-fE-jwW"/>
                                 </connections>
                             </segmentedControl>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hcx-RO-rNV">
+                                <frame key="frameInset" minY="291" height="216"/>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWg-z1-qJF">
                                 <frame key="frameInset" minX="339" minY="20" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,13 +96,15 @@
                             <constraint firstItem="YIF-k3-4mn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="6Ih-dh-8eo"/>
                             <constraint firstItem="ah1-n9-sbH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cpn-qt-Rxo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Sq-4L-udj" secondAttribute="trailing" constant="50" id="EDi-yd-e33"/>
+                            <constraint firstItem="Hcx-RO-rNV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ele-Qi-Hic"/>
                             <constraint firstItem="0Sq-4L-udj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="c9R-IF-JGt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mts-vc-Yco" secondAttribute="trailing" constant="50" id="iRk-lX-fev"/>
+                            <constraint firstItem="Hcx-RO-rNV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="275" id="mRu-6c-ULJ"/>
                             <constraint firstItem="Mam-dy-rHJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="nnY-hY-NAG"/>
                             <constraint firstItem="YIF-k3-4mn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="o5N-KZ-kox"/>
                             <constraint firstItem="TQv-NR-a2D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r3i-JK-Wdn"/>
                             <constraint firstItem="mts-vc-Yco" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="sBB-fH-odG"/>
-                            <constraint firstItem="ah1-n9-sbH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="400" id="sHe-LW-bRg"/>
+                            <constraint firstItem="ah1-n9-sbH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="500" id="sHe-LW-bRg"/>
                             <constraint firstItem="CO3-W2-dY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="wJY-A3-HDz"/>
                             <constraint firstItem="CO3-W2-dY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="z3u-mb-SW7"/>
                         </constraints>
@@ -113,6 +118,7 @@
                         <outlet property="longitudeTextField" destination="mts-vc-Yco" id="1If-p4-kKG"/>
                         <outlet property="map" destination="pJG-WU-zlG" id="5EX-I8-cES"/>
                         <outlet property="mapButton" destination="TQv-NR-a2D" id="k5Q-1X-S3t"/>
+                        <outlet property="pickerView" destination="Hcx-RO-rNV" id="Oit-le-n37"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
