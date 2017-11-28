@@ -24,7 +24,7 @@ NSArray *_pickerViewArray;
     self.map.delegate = self;
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
-    _pickerViewArray = @[@"81mm Mortar", @"105mm Ground Burst", @"105mm Air Burst", @"Pistol", @"155mm Ground Burst", @"155mm Air Burst", @"UGL", @"RPG-18", @"AK-47", @"SA80 A2", @"AKM", @"LMG", @"ASM", @"LSM", @"RPK LMG", @"L129A1", @"N-LAW", @"LSW", @"RPG-18", @"GPMG", @"RPG-7", @"RPO-A", @"L115A3", @"Dragonov", @"DsHK HMG", @"GMG"];
+    _pickerViewArray = @[@"None", @"81mm Mortar", @"105mm Ground Burst", @"105mm Air Burst", @"Pistol", @"155mm Ground Burst", @"155mm Air Burst", @"UGL", @"RPG-18", @"AK-47", @"SA80 A2", @"AKM", @"LMG", @"ASM", @"LSM", @"RPK LMG", @"L129A1", @"N-LAW", @"LSW", @"RPG-18", @"GPMG", @"RPG-7", @"RPO-A", @"L115A3", @"Dragonov", @"DsHK HMG", @"GMG"];
     
 // https://stackoverflow.com/questions/36492112/mapkit-overlay-does-not-appear
     // Do any additional setup after loading the view, typically from a nib.
@@ -35,16 +35,13 @@ NSArray *_pickerViewArray;
     // Dispose of any resources that can be recreated.
 }
 
-
-
-
 - (IBAction)goButton:(id)sender {
-    NSLog(@"Longitude - %@", self.longitudeTextField.text);
-    NSLog(@"Latitude - %@", self.latitudeTextField.text);
+//    NSLog(@"Longitude - %@", self.longitudeTextField.text);
+//    NSLog(@"Latitude - %@", self.latitudeTextField.text);
     self.longitude = [self.longitudeTextField.text doubleValue];
     self.latitude = [self.latitudeTextField.text doubleValue];
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-    self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+//    CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
+//    self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
 //    MKCircle *pistol = [MKCircle circleWithCenterCoordinate:location.coordinate radius:25];
 //    [self.map addOverlay:pistol level:MKOverlayLevelAboveRoads];
 //    MKCircle *sa80 = [MKCircle circleWithCenterCoordinate:location.coordinate radius:300];
@@ -122,159 +119,217 @@ NSArray *_pickerViewArray;
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     NSString *equipmentSelected = [_pickerViewArray objectAtIndex:row];
-    if ([equipmentSelected isEqualToString:@"81mm Mortar"]) {
+    if ([equipmentSelected isEqualToString:@"None"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+    }
+    if ([equipmentSelected isEqualToString:@"81mm Mortar"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
+        CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.002, 0.002));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:40];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"105mm Ground Burst"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.002, 0.002));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:40];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"105mm Air Burst"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.0025, 0.0025));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:50];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"Pistol"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.0025, 0.0025));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:50];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"155mm Ground Burst"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.0028, 0.0028));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:55];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"155mm Air Burst"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.0043, 0.0043));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:85];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"UGL"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.0075, 0.0075));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:150];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"RPG-18"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.01, 0.01));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:200];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"AK-47"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.015, 0.015));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:300];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"SA80 A2"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.015, 0.015));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:300];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"AKM"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.02, 0.02));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:400];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"LMG"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.02, 0.02));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:400];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"ASM"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.02, 0.02));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:400];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"LSM"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.025, 0.025));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:500];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"RPK LMG"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.03, 0.03));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:600];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"L129A1"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.03, 0.03));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:600];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"N-LAW"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.03, 0.03));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:600];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"LSW"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.04, 0.04));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:800];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"RPG-18"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.04, 0.04));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:800];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"GPMG"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.04, 0.04));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:800];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"RPG-7"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
-        MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:125];
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.046, 0.046));
+        MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:925];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"RPO-A"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1000];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"L115A3"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1000];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"Dragonov"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.065, 0.065));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1300];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"DsHK HMG"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.075, 0.075));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1500];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
     if ([equipmentSelected isEqualToString:@"GMG"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.075, 0.075));
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1500];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -290,5 +345,7 @@ NSArray *_pickerViewArray;
 -(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return _pickerViewArray[row];
 }
+
+// https://www.youtube.com/watch?v=sofEcrhE5AM
 
 @end
