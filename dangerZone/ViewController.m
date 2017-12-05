@@ -99,12 +99,16 @@ NSArray *_pickerViewArray;
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     NSString *equipmentSelected = [_pickerViewArray objectAtIndex:row];
     if ([equipmentSelected isEqualToString:@"Select Below"]) {
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
     }
     if ([equipmentSelected isEqualToString:@"81mm Mortar"]) {
         self.longitude = [self.longitudeTextField.text doubleValue];
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.002, 0.002));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:40];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -113,6 +117,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.002, 0.002));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:40];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -121,6 +127,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.0025, 0.0025));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:50];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -129,6 +137,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.0025, 0.0025));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:50];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -137,6 +147,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.0028, 0.0028));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:55];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -145,6 +157,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.0043, 0.0043));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:85];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -153,6 +167,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.0075, 0.0075));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:150];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -161,6 +177,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.01, 0.01));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:200];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -169,6 +187,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.015, 0.015));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:300];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -177,6 +197,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.015, 0.015));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:300];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -185,6 +207,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.02, 0.02));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:400];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -193,6 +217,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.02, 0.02));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:400];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -201,6 +227,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.02, 0.02));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:400];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -209,6 +237,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.025, 0.025));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:500];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -217,6 +247,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.03, 0.03));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:600];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -225,6 +257,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.03, 0.03));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:600];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -233,6 +267,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.03, 0.03));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:600];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -241,6 +277,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.04, 0.04));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:800];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -249,6 +287,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.04, 0.04));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:800];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -257,6 +297,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.04, 0.04));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:800];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -265,6 +307,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.046, 0.046));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:925];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -273,6 +317,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1000];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -281,6 +327,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1000];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -289,6 +337,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.065, 0.065));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1300];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -297,6 +347,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.075, 0.075));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1500];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
@@ -305,6 +357,8 @@ NSArray *_pickerViewArray;
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
         self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.075, 0.075));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1500];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
