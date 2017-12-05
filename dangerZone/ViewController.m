@@ -24,7 +24,7 @@ NSArray *_pickerViewArray;
     self.map.delegate = self;
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
-    _pickerViewArray = @[@"None", @"81mm Mortar", @"105mm Ground Burst", @"105mm Air Burst", @"Pistol", @"155mm Ground Burst", @"155mm Air Burst", @"UGL", @"RPG-18", @"AK-47", @"SA80 A2", @"AKM", @"LMG", @"ASM", @"LSM", @"RPK LMG", @"L129A1", @"N-LAW", @"LSW", @"RPG-18", @"GPMG", @"RPG-7", @"RPO-A", @"L115A3", @"Dragonov", @"DsHK HMG", @"GMG"];
+    _pickerViewArray = @[@"Select Below", @"81mm Mortar", @"105mm Ground Burst", @"105mm Air Burst", @"Pistol", @"155mm Ground Burst", @"155mm Air Burst", @"UGL", @"RPG-18", @"AK-47", @"SA80 A2", @"AKM", @"LMG", @"ASM", @"LSM", @"RPK LMG", @"L129A1", @"N-LAW", @"LSW", @"RPG-18", @"GPMG", @"RPG-7", @"RPO-A", @"L115A3", @"Dragonov", @"DsHK HMG", @"GMG"];
     
 // https://stackoverflow.com/questions/36492112/mapkit-overlay-does-not-appear
     // Do any additional setup after loading the view, typically from a nib.
@@ -36,28 +36,8 @@ NSArray *_pickerViewArray;
 }
 
 - (IBAction)goButton:(id)sender {
-//    NSLog(@"Longitude - %@", self.longitudeTextField.text);
-//    NSLog(@"Latitude - %@", self.latitudeTextField.text);
     self.longitude = [self.longitudeTextField.text doubleValue];
     self.latitude = [self.latitudeTextField.text doubleValue];
-//    CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-//    self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
-//    MKCircle *pistol = [MKCircle circleWithCenterCoordinate:location.coordinate radius:25];
-//    [self.map addOverlay:pistol level:MKOverlayLevelAboveRoads];
-//    MKCircle *sa80 = [MKCircle circleWithCenterCoordinate:location.coordinate radius:300];
-//    [self.map addOverlay:sa80 level:MKOverlayLevelAboveRoads];
-//    MKCircle *lmg = [MKCircle circleWithCenterCoordinate:location.coordinate radius:400];
-//    [self.map addOverlay:lmg level:MKOverlayLevelAboveRoads];
-//    MKCircle *lsm = [MKCircle circleWithCenterCoordinate:location.coordinate radius:500];
-//    [self.map addOverlay:lsm level:MKOverlayLevelAboveRoads];
-//    MKCircle *l12a1 = [MKCircle circleWithCenterCoordinate:location.coordinate radius:600];
-//    [self.map addOverlay:l12a1 level:MKOverlayLevelAboveRoads];
-//    MKCircle *lsw = [MKCircle circleWithCenterCoordinate:location.coordinate radius:800];
-//    [self.map addOverlay:lsw level:MKOverlayLevelAboveRoads];
-//    MKCircle *rpg7 = [MKCircle circleWithCenterCoordinate:location.coordinate radius:925];
-//    [self.map addOverlay:rpg7 level:MKOverlayLevelAboveRoads];
-//    MKCircle *l115a3 = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1000];
-//    [self.map addOverlay:l115a3 level:MKOverlayLevelAboveRoads];
     self.map.hidden = false;
     self.mapButton.hidden = false;
     self.closeButton.hidden = false;
@@ -110,7 +90,6 @@ NSArray *_pickerViewArray;
 - (MKOverlayRenderer *)mapView:(MKMapView *)map viewForOverlay:(id <MKOverlay>)overlay
 {
     MKCircleRenderer *circleView = [[MKCircleRenderer alloc] initWithOverlay:overlay];
-//    circleView.strokeColor = [UIColor redColor];
     circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
     return circleView;
 }
@@ -119,11 +98,7 @@ NSArray *_pickerViewArray;
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     NSString *equipmentSelected = [_pickerViewArray objectAtIndex:row];
-    if ([equipmentSelected isEqualToString:@"None"]) {
-        self.longitude = [self.longitudeTextField.text doubleValue];
-        self.latitude = [self.latitudeTextField.text doubleValue];
-        CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+    if ([equipmentSelected isEqualToString:@"Select Below"]) {
     }
     if ([equipmentSelected isEqualToString:@"81mm Mortar"]) {
         self.longitude = [self.longitudeTextField.text doubleValue];
