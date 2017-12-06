@@ -232,6 +232,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRf-3W-eiI">
+                                <frame key="frameInset" minX="67" minY="121" width="240" height="128"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calibre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4x-C6-Q23">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -241,9 +244,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n3g-0Y-bxH" firstAttribute="top" secondItem="Tm2-2F-6h8" secondAttribute="bottom" constant="420" id="1ni-Xy-7WM"/>
+                            <constraint firstItem="JRf-3W-eiI" firstAttribute="top" secondItem="Tm2-2F-6h8" secondAttribute="bottom" constant="60" id="RrQ-GO-was"/>
                             <constraint firstItem="Sv2-NC-gO2" firstAttribute="centerX" secondItem="0ac-ik-pJd" secondAttribute="centerX" id="S4J-BY-zIm"/>
                             <constraint firstItem="p4x-C6-Q23" firstAttribute="top" secondItem="Tm2-2F-6h8" secondAttribute="bottom" constant="320" id="bNm-Wr-yEi"/>
                             <constraint firstItem="p4x-C6-Q23" firstAttribute="centerX" secondItem="0ac-ik-pJd" secondAttribute="centerX" id="efp-ir-AeI"/>
+                            <constraint firstItem="JRf-3W-eiI" firstAttribute="centerX" secondItem="0ac-ik-pJd" secondAttribute="centerX" id="gqn-WJ-9rl"/>
                             <constraint firstItem="i1u-sD-FW7" firstAttribute="top" secondItem="Tm2-2F-6h8" secondAttribute="bottom" constant="370" id="jzf-kT-SBA"/>
                             <constraint firstItem="Sv2-NC-gO2" firstAttribute="top" secondItem="Tm2-2F-6h8" secondAttribute="bottom" constant="270" id="pJY-sp-Cb6"/>
                             <constraint firstItem="i1u-sD-FW7" firstAttribute="centerX" secondItem="0ac-ik-pJd" secondAttribute="centerX" id="wgT-Xz-G0t"/>
