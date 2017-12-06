@@ -21,6 +21,7 @@
     self.calibreLabel.text = self.equipment.calibre;
     self.ammoLabel.text = self.equipment.ammo;
     self.rangeLabel.text = self.equipment.range;
+    self.pic.image = self.equipment.pic;
     
     // Do any additional setup after loading the view.
 }

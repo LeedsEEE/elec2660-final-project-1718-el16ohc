@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cpy-O5-gU0" id="eyW-GV-opv">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mlQ-lB-o1y">
@@ -192,7 +192,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Smu-Em-QDG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B2v-WL-TEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="ejf-LW-KBT" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1UI-0O-h6a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -202,6 +201,7 @@
                         <segue destination="5dU-J0-yFh" kind="relationship" relationship="rootViewController" id="Wrd-wM-xME"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2v-WL-TEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="982" y="123"/>
         </scene>
@@ -232,8 +232,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRf-3W-eiI">
-                                <frame key="frameInset" minX="67" minY="121" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRf-3W-eiI">
+                                <frame key="frameInset" minX="67" minY="121" width="240" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="XDS-A9-dRN"/>
+                                    <constraint firstAttribute="height" constant="140" id="zMG-mi-cVL"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calibre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4x-C6-Q23">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -259,6 +263,7 @@
                         <outlet property="ammoLabel" destination="i1u-sD-FW7" id="Yqm-f8-3Cs"/>
                         <outlet property="calibreLabel" destination="p4x-C6-Q23" id="Mgk-Bf-yX2"/>
                         <outlet property="nameLabel" destination="Sv2-NC-gO2" id="Cph-R4-99C"/>
+                        <outlet property="pic" destination="JRf-3W-eiI" id="QG2-yH-mml"/>
                         <outlet property="rangeLabel" destination="n3g-0Y-bxH" id="bvM-RZ-eXn"/>
                     </connections>
                 </viewController>

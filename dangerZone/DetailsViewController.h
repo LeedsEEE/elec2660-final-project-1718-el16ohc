@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *ammoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rangeLabel;
 @property (strong, nonatomic) equipment *equipment;
+@property (weak, nonatomic) IBOutlet UIImageView *pic;
 
 @end

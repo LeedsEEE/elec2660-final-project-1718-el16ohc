@@ -21,6 +21,15 @@
 		EA95151D1FD864AD00386EEF /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA95151C1FD864AD00386EEF /* TableViewController.m */; };
 		EA9515201FD8658C00386EEF /* equipment.m in Sources */ = {isa = PBXBuildFile; fileRef = EA95151F1FD8658C00386EEF /* equipment.m */; };
 		EA9515231FD866F000386EEF /* dataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9515221FD866F000386EEF /* dataModel.m */; };
+		EAA46BBC1FD88D0200B222D0 /* ak-47.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB31FD88D0200B222D0 /* ak-47.jpg */; };
+		EAA46BBD1FD88D0200B222D0 /* akm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB41FD88D0200B222D0 /* akm.jpg */; };
+		EAA46BBE1FD88D0200B222D0 /* dragunov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB51FD88D0200B222D0 /* dragunov.jpg */; };
+		EAA46BBF1FD88D0200B222D0 /* dshk_hmg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB61FD88D0200B222D0 /* dshk_hmg.jpg */; };
+		EAA46BC01FD88D0200B222D0 /* rpg-18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB71FD88D0200B222D0 /* rpg-18.jpg */; };
+		EAA46BC11FD88D0200B222D0 /* rpg7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB81FD88D0200B222D0 /* rpg7.jpg */; };
+		EAA46BC21FD88D0200B222D0 /* rpk_lmg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB91FD88D0200B222D0 /* rpk_lmg.jpg */; };
+		EAA46BC31FD88D0200B222D0 /* rpo-a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BBA1FD88D0200B222D0 /* rpo-a.jpg */; };
+		EAA46BC41FD88D0200B222D0 /* tt-33_tokarev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BBB1FD88D0200B222D0 /* tt-33_tokarev.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +76,15 @@
 		EA95151F1FD8658C00386EEF /* equipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = equipment.m; sourceTree = "<group>"; };
 		EA9515211FD866F000386EEF /* dataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataModel.h; sourceTree = "<group>"; };
 		EA9515221FD866F000386EEF /* dataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataModel.m; sourceTree = "<group>"; };
+		EAA46BB31FD88D0200B222D0 /* ak-47.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ak-47.jpg"; sourceTree = "<group>"; };
+		EAA46BB41FD88D0200B222D0 /* akm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = akm.jpg; sourceTree = "<group>"; };
+		EAA46BB51FD88D0200B222D0 /* dragunov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragunov.jpg; sourceTree = "<group>"; };
+		EAA46BB61FD88D0200B222D0 /* dshk_hmg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dshk_hmg.jpg; sourceTree = "<group>"; };
+		EAA46BB71FD88D0200B222D0 /* rpg-18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rpg-18.jpg"; sourceTree = "<group>"; };
+		EAA46BB81FD88D0200B222D0 /* rpg7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rpg7.jpg; sourceTree = "<group>"; };
+		EAA46BB91FD88D0200B222D0 /* rpk_lmg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rpk_lmg.jpg; sourceTree = "<group>"; };
+		EAA46BBA1FD88D0200B222D0 /* rpo-a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rpo-a.jpg"; sourceTree = "<group>"; };
+		EAA46BBB1FD88D0200B222D0 /* tt-33_tokarev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tt-33_tokarev.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +154,15 @@
 				EA0ABE441FBF475F002B8C93 /* Assets.xcassets */,
 				EA0ABE461FBF475F002B8C93 /* LaunchScreen.storyboard */,
 				EA0ABE491FBF475F002B8C93 /* Info.plist */,
+				EAA46BB31FD88D0200B222D0 /* ak-47.jpg */,
+				EAA46BB41FD88D0200B222D0 /* akm.jpg */,
+				EAA46BB51FD88D0200B222D0 /* dragunov.jpg */,
+				EAA46BB61FD88D0200B222D0 /* dshk_hmg.jpg */,
+				EAA46BB71FD88D0200B222D0 /* rpg-18.jpg */,
+				EAA46BB81FD88D0200B222D0 /* rpg7.jpg */,
+				EAA46BB91FD88D0200B222D0 /* rpk_lmg.jpg */,
+				EAA46BBA1FD88D0200B222D0 /* rpo-a.jpg */,
+				EAA46BBB1FD88D0200B222D0 /* tt-33_tokarev.jpg */,
 				EA0ABE381FBF475F002B8C93 /* Supporting Files */,
 			);
 			path = dangerZone;
@@ -282,8 +309,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA46BC01FD88D0200B222D0 /* rpg-18.jpg in Resources */,
+				EAA46BBD1FD88D0200B222D0 /* akm.jpg in Resources */,
+				EAA46BC21FD88D0200B222D0 /* rpk_lmg.jpg in Resources */,
+				EAA46BBF1FD88D0200B222D0 /* dshk_hmg.jpg in Resources */,
+				EAA46BBE1FD88D0200B222D0 /* dragunov.jpg in Resources */,
+				EAA46BC11FD88D0200B222D0 /* rpg7.jpg in Resources */,
+				EAA46BC31FD88D0200B222D0 /* rpo-a.jpg in Resources */,
+				EAA46BBC1FD88D0200B222D0 /* ak-47.jpg in Resources */,
 				EA0ABE481FBF475F002B8C93 /* LaunchScreen.storyboard in Resources */,
 				EA0ABE451FBF475F002B8C93 /* Assets.xcassets in Resources */,
+				EAA46BC41FD88D0200B222D0 /* tt-33_tokarev.jpg in Resources */,
 				EA0ABE431FBF475F002B8C93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

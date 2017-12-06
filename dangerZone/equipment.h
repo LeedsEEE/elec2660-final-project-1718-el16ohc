@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface equipment : NSObject
 
@@ -14,5 +15,6 @@
 @property (nonatomic, strong) NSString *calibre;
 @property (nonatomic, strong) NSString *ammo;
 @property (nonatomic, strong) NSString *range;
+@property (nonatomic, strong) UIImage *pic;
 
 @end
