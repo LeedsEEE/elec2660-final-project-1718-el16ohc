@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.data = [[dataModel alloc] init];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -36,12 +38,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 26;
+    
+    NSInteger numberOfRows;
+    if (section == 0) {
+        numberOfRows = self.data.equipment.count;
+    }
+    return numberOfRows;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"equipmentCell" forIndexPath:indexPath];
+    
+    if(indexPath.section == 0){
+        equipment *tempequipment = [self.data.equipment objectAtIndex:indexPath.row];
+        cell.textLabel.text = tempequipment.name;
+        cell.detailTextLabel.text = tempequipment.calibre;
+    }
     
     // Configure the cell...
     
