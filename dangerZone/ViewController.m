@@ -42,6 +42,7 @@ NSArray *_pickerViewArray;
     self.mapButton.hidden = false;
     self.closeButton.hidden = false;
     self.pickerView.hidden = true;
+    self.infoButton.hidden = true;
 }
 
 - (IBAction)backgroundPressed:(id)sender {
@@ -78,6 +79,10 @@ NSArray *_pickerViewArray;
     self.mapButton.hidden = true;
     self.closeButton.hidden = true;
     self.pickerView.hidden = false;
+    self.infoButton.hidden = false;
+}
+
+- (IBAction)infoButton:(id)sender {
 }
 
 # pragma mark Text Field Delegate Methods

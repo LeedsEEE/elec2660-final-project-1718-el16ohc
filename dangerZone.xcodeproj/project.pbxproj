@@ -26,7 +26,7 @@
 		EAA46BBE1FD88D0200B222D0 /* dragunov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB51FD88D0200B222D0 /* dragunov.jpg */; };
 		EAA46BBF1FD88D0200B222D0 /* dshk_hmg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB61FD88D0200B222D0 /* dshk_hmg.jpg */; };
 		EAA46BC01FD88D0200B222D0 /* rpg-18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB71FD88D0200B222D0 /* rpg-18.jpg */; };
-		EAA46BC11FD88D0200B222D0 /* rpg7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB81FD88D0200B222D0 /* rpg7.jpg */; };
+		EAA46BC11FD88D0200B222D0 /* rpg-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB81FD88D0200B222D0 /* rpg-7.jpg */; };
 		EAA46BC21FD88D0200B222D0 /* rpk_lmg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB91FD88D0200B222D0 /* rpk_lmg.jpg */; };
 		EAA46BC31FD88D0200B222D0 /* rpo-a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BBA1FD88D0200B222D0 /* rpo-a.jpg */; };
 		EAA46BC41FD88D0200B222D0 /* tt-33_tokarev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BBB1FD88D0200B222D0 /* tt-33_tokarev.jpg */; };
@@ -81,7 +81,7 @@
 		EAA46BB51FD88D0200B222D0 /* dragunov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragunov.jpg; sourceTree = "<group>"; };
 		EAA46BB61FD88D0200B222D0 /* dshk_hmg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dshk_hmg.jpg; sourceTree = "<group>"; };
 		EAA46BB71FD88D0200B222D0 /* rpg-18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rpg-18.jpg"; sourceTree = "<group>"; };
-		EAA46BB81FD88D0200B222D0 /* rpg7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rpg7.jpg; sourceTree = "<group>"; };
+		EAA46BB81FD88D0200B222D0 /* rpg-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rpg-7.jpg"; sourceTree = "<group>"; };
 		EAA46BB91FD88D0200B222D0 /* rpk_lmg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rpk_lmg.jpg; sourceTree = "<group>"; };
 		EAA46BBA1FD88D0200B222D0 /* rpo-a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rpo-a.jpg"; sourceTree = "<group>"; };
 		EAA46BBB1FD88D0200B222D0 /* tt-33_tokarev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tt-33_tokarev.jpg"; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 				EAA46BB51FD88D0200B222D0 /* dragunov.jpg */,
 				EAA46BB61FD88D0200B222D0 /* dshk_hmg.jpg */,
 				EAA46BB71FD88D0200B222D0 /* rpg-18.jpg */,
-				EAA46BB81FD88D0200B222D0 /* rpg7.jpg */,
+				EAA46BB81FD88D0200B222D0 /* rpg-7.jpg */,
 				EAA46BB91FD88D0200B222D0 /* rpk_lmg.jpg */,
 				EAA46BBA1FD88D0200B222D0 /* rpo-a.jpg */,
 				EAA46BBB1FD88D0200B222D0 /* tt-33_tokarev.jpg */,
@@ -314,7 +314,7 @@
 				EAA46BC21FD88D0200B222D0 /* rpk_lmg.jpg in Resources */,
 				EAA46BBF1FD88D0200B222D0 /* dshk_hmg.jpg in Resources */,
 				EAA46BBE1FD88D0200B222D0 /* dragunov.jpg in Resources */,
-				EAA46BC11FD88D0200B222D0 /* rpg7.jpg in Resources */,
+				EAA46BC11FD88D0200B222D0 /* rpg-7.jpg in Resources */,
 				EAA46BC31FD88D0200B222D0 /* rpo-a.jpg in Resources */,
 				EAA46BBC1FD88D0200B222D0 /* ak-47.jpg in Resources */,
 				EA0ABE481FBF475F002B8C93 /* LaunchScreen.storyboard in Resources */,

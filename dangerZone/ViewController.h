@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *mapButton;
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (weak, nonatomic) IBOutlet UIButton *infoButton;
 @property CLLocationDegrees longitude;
 @property CLLocationDegrees latitude;
 
@@ -25,6 +26,7 @@
 - (IBAction)backgroundPressed:(id)sender;
 - (IBAction)mapButton:(id)sender;
 - (IBAction)closeButton:(id)sender;
+- (IBAction)infoButton:(id)sender;
 
 @end
 
