@@ -17,6 +17,10 @@
 		EA0ABE5E1FBF4760002B8C93 /* dangerZoneUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0ABE5D1FBF4760002B8C93 /* dangerZoneUITests.m */; };
 		EA0ABE6D1FBF49EF002B8C93 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0ABE6C1FBF49EF002B8C93 /* CoreLocation.framework */; };
 		EA0ABE6F1FBF5918002B8C93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0ABE6E1FBF5918002B8C93 /* MapKit.framework */; };
+		EA95151A1FD8643800386EEF /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9515191FD8643800386EEF /* DetailsViewController.m */; };
+		EA95151D1FD864AD00386EEF /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA95151C1FD864AD00386EEF /* TableViewController.m */; };
+		EA9515201FD8658C00386EEF /* equipment.m in Sources */ = {isa = PBXBuildFile; fileRef = EA95151F1FD8658C00386EEF /* equipment.m */; };
+		EA9515231FD866F000386EEF /* dataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9515221FD866F000386EEF /* dataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,14 @@
 		EA0ABE5F1FBF4760002B8C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0ABE6C1FBF49EF002B8C93 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EA0ABE6E1FBF5918002B8C93 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EA9515181FD8643800386EEF /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		EA9515191FD8643800386EEF /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		EA95151B1FD864AD00386EEF /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		EA95151C1FD864AD00386EEF /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		EA95151E1FD8658C00386EEF /* equipment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = equipment.h; sourceTree = "<group>"; };
+		EA95151F1FD8658C00386EEF /* equipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = equipment.m; sourceTree = "<group>"; };
+		EA9515211FD866F000386EEF /* dataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataModel.h; sourceTree = "<group>"; };
+		EA9515221FD866F000386EEF /* dataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +125,14 @@
 				EA0ABE3E1FBF475F002B8C93 /* ViewController.h */,
 				EA0ABE3F1FBF475F002B8C93 /* ViewController.m */,
 				EA0ABE411FBF475F002B8C93 /* Main.storyboard */,
+				EA95151E1FD8658C00386EEF /* equipment.h */,
+				EA9515211FD866F000386EEF /* dataModel.h */,
+				EA9515221FD866F000386EEF /* dataModel.m */,
+				EA95151F1FD8658C00386EEF /* equipment.m */,
+				EA95151B1FD864AD00386EEF /* TableViewController.h */,
+				EA95151C1FD864AD00386EEF /* TableViewController.m */,
+				EA9515181FD8643800386EEF /* DetailsViewController.h */,
+				EA9515191FD8643800386EEF /* DetailsViewController.m */,
 				EA0ABE441FBF475F002B8C93 /* Assets.xcassets */,
 				EA0ABE461FBF475F002B8C93 /* LaunchScreen.storyboard */,
 				EA0ABE491FBF475F002B8C93 /* Info.plist */,
@@ -289,9 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9515201FD8658C00386EEF /* equipment.m in Sources */,
 				EA0ABE401FBF475F002B8C93 /* ViewController.m in Sources */,
+				EA9515231FD866F000386EEF /* dataModel.m in Sources */,
 				EA0ABE3D1FBF475F002B8C93 /* AppDelegate.m in Sources */,
 				EA0ABE3A1FBF475F002B8C93 /* main.m in Sources */,
+				EA95151D1FD864AD00386EEF /* TableViewController.m in Sources */,
+				EA95151A1FD8643800386EEF /* DetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +547,7 @@
 				EA0ABE641FBF4760002B8C93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA0ABE651FBF4760002B8C93 /* Build configuration list for PBXNativeTarget "dangerZoneTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +556,7 @@
 				EA0ABE671FBF4760002B8C93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA0ABE681FBF4760002B8C93 /* Build configuration list for PBXNativeTarget "dangerZoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +565,7 @@
 				EA0ABE6A1FBF4760002B8C93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
