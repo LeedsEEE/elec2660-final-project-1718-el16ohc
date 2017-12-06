@@ -16,6 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.nameLabel.text = self.equipment.name;
+    self.calibreLabel.text = self.equipment.calibre;
+    self.ammoLabel.text = self.equipment.ammo;
+    self.rangeLabel.text = self.equipment.range;
+    
     // Do any additional setup after loading the view.
 }
 

@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="iMB-be-QHH" kind="show" id="bax-bk-GcX"/>
+                                    <segue destination="iMB-be-QHH" kind="show" identifier="showEquipmentDetails" id="bax-bk-GcX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -216,8 +216,46 @@
                     <view key="view" contentMode="scaleToFill" id="0ac-ik-pJd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sv2-NC-gO2">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ammo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1u-sD-FW7">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3g-0Y-bxH">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calibre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4x-C6-Q23">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n3g-0Y-bxH" firstAttribute="top" secondItem="Tm2-2F-6h8" secondAttribute="bottom" constant="420" id="1ni-Xy-7WM"/>
+                            <constraint firstItem="Sv2-NC-gO2" firstAttribute="centerX" secondItem="0ac-ik-pJd" secondAttribute="centerX" id="S4J-BY-zIm"/>
+                            <constraint firstItem="p4x-C6-Q23" firstAttribute="top" secondItem="Tm2-2F-6h8" secondAttribute="bottom" constant="320" id="bNm-Wr-yEi"/>
+                            <constraint firstItem="p4x-C6-Q23" firstAttribute="centerX" secondItem="0ac-ik-pJd" secondAttribute="centerX" id="efp-ir-AeI"/>
+                            <constraint firstItem="i1u-sD-FW7" firstAttribute="top" secondItem="Tm2-2F-6h8" secondAttribute="bottom" constant="370" id="jzf-kT-SBA"/>
+                            <constraint firstItem="Sv2-NC-gO2" firstAttribute="top" secondItem="Tm2-2F-6h8" secondAttribute="bottom" constant="270" id="pJY-sp-Cb6"/>
+                            <constraint firstItem="i1u-sD-FW7" firstAttribute="centerX" secondItem="0ac-ik-pJd" secondAttribute="centerX" id="wgT-Xz-G0t"/>
+                            <constraint firstItem="n3g-0Y-bxH" firstAttribute="centerX" secondItem="0ac-ik-pJd" secondAttribute="centerX" id="yeG-xR-ZE9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ammoLabel" destination="i1u-sD-FW7" id="Yqm-f8-3Cs"/>
+                        <outlet property="calibreLabel" destination="p4x-C6-Q23" id="Mgk-Bf-yX2"/>
+                        <outlet property="nameLabel" destination="Sv2-NC-gO2" id="Cph-R4-99C"/>
+                        <outlet property="rangeLabel" destination="n3g-0Y-bxH" id="bvM-RZ-eXn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrP-CI-UJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

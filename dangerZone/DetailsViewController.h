@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "equipment.h"
 
 @interface DetailsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *calibreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ammoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rangeLabel;
+@property (strong, nonatomic) equipment *equipment;
 
 @end

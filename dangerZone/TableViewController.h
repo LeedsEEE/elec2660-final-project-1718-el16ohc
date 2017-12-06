@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "dataModel.h"
+#import "DetailsViewController.h"
 
 @interface TableViewController : UITableViewController
 
