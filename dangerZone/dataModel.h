@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "equipment.h"
-
 @interface dataModel : NSObject
-
 @property (strong, nonatomic) NSMutableArray *equipment;
-
 @end
