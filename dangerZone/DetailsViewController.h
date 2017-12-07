@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *calibreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ammoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rangeLabel;
+// Defines data model to have properties assigned.
 @property (strong, nonatomic) equipment *equipment;
 @property (weak, nonatomic) IBOutlet UIImageView *pic;
 @end
