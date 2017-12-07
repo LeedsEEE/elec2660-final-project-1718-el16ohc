@@ -7,15 +7,10 @@
 //
 
 #import "ViewController.h"
-
 @interface ViewController ()
-
 @end
-
 NSArray *_pickerViewArray;
-
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.map.hidden = true;
@@ -25,16 +20,10 @@ NSArray *_pickerViewArray;
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     _pickerViewArray = @[@"Select Below", @"81mm Mortar", @"105mm Ground Burst", @"105mm Air Burst", @"Pistol", @"155mm Ground Burst", @"155mm Air Burst", @"UGL", @"RPG-18", @"AK-47", @"SA80 A2", @"AKM", @"LMG", @"ASM", @"LSM", @"RPK LMG", @"L129A1", @"N-LAW", @"LSW", @"RPG-18", @"GPMG", @"RPG-7", @"RPO-A", @"L115A3", @"Dragonov", @"DsHK HMG", @"GMG"];
-    
-// https://stackoverflow.com/questions/36492112/mapkit-overlay-does-not-appear
-    // Do any additional setup after loading the view, typically from a nib.
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
 - (IBAction)goButton:(id)sender {
     self.longitude = [self.longitudeTextField.text doubleValue];
     self.latitude = [self.latitudeTextField.text doubleValue];
@@ -44,7 +33,6 @@ NSArray *_pickerViewArray;
     self.pickerView.hidden = true;
     self.infoButton.hidden = true;
 }
-
 - (IBAction)backgroundPressed:(id)sender {
     if ([self.longitudeTextField isFirstResponder]) {
         [self.longitudeTextField resignFirstResponder];
@@ -53,7 +41,6 @@ NSArray *_pickerViewArray;
         [self.longitudeTextField resignFirstResponder];
     }
 }
-
 - (IBAction)mapButton:(id)sender {
 
     switch (((UISegmentedControl *) sender).selectedSegmentIndex) {
@@ -71,9 +58,7 @@ NSArray *_pickerViewArray;
             break;
     }
 }
-
 // https://stackoverflow.com/questions/20591345/apple-mapkit-map-style-implement-style-change-using-segmented-controller
-
 - (IBAction)closeButton:(id)sender {
     self.map.hidden = true;
     self.mapButton.hidden = true;
@@ -81,31 +66,26 @@ NSArray *_pickerViewArray;
     self.pickerView.hidden = false;
     self.infoButton.hidden = false;
 }
-
 - (IBAction)infoButton:(id)sender {
 }
-
 # pragma mark Text Field Delegate Methods
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
 }
-
 - (MKOverlayRenderer *)mapView:(MKMapView *)map viewForOverlay:(id <MKOverlay>)overlay
 {
     MKCircleRenderer *circleView = [[MKCircleRenderer alloc] initWithOverlay:overlay];
     circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
     return circleView;
 }
-
 // https://stackoverflow.com/questions/9056451/draw-a-circle-of-1000m-radius-around-users-location-in-mkmapview
-
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     NSString *equipmentSelected = [_pickerViewArray objectAtIndex:row];
     if ([equipmentSelected isEqualToString:@"Select Below"]) {
         NSArray *erase = [self.map overlays];
         [self.map removeOverlays:erase];
+// https://stackoverflow.com/questions/8000373/remove-mkmapview-overlay-on-button-push
     }
     if ([equipmentSelected isEqualToString:@"81mm Mortar"]) {
         self.longitude = [self.longitudeTextField.text doubleValue];
@@ -368,18 +348,14 @@ NSArray *_pickerViewArray;
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
 }
-
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return _pickerViewArray.count;
 }
-
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 -(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return _pickerViewArray[row];
 }
-
 // https://www.youtube.com/watch?v=sofEcrhE5AM
-
 @end
