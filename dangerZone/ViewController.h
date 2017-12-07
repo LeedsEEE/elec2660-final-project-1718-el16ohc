@@ -11,7 +11,6 @@
 #import <MapKit/MapKit.h>
 
 @interface ViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
-
 @property (weak, nonatomic) IBOutlet UITextField *longitudeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *latitudeTextField;
 @property (weak, nonatomic) IBOutlet MKMapView *map;
@@ -21,12 +20,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
 @property CLLocationDegrees longitude;
 @property CLLocationDegrees latitude;
-
 - (IBAction)goButton:(id)sender;
 - (IBAction)backgroundPressed:(id)sender;
 - (IBAction)mapButton:(id)sender;
 - (IBAction)closeButton:(id)sender;
 - (IBAction)infoButton:(id)sender;
-
 @end
-
