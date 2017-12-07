@@ -7,38 +7,19 @@
 //
 
 #import "DetailsViewController.h"
-
 @interface DetailsViewController ()
-
 @end
-
 @implementation DetailsViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // Initiating Labels and UIImage in the viewDidLoad
     self.nameLabel.text = self.equipment.name;
     self.calibreLabel.text = self.equipment.calibre;
     self.ammoLabel.text = self.equipment.ammo;
     self.rangeLabel.text = self.equipment.range;
     self.pic.image = self.equipment.pic;
-    
-    // Do any additional setup after loading the view.
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
