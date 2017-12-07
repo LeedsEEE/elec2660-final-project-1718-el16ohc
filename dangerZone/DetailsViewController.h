@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "equipment.h"
+
 @interface DetailsViewController : UIViewController
 // Outlets for all Labels and UIImageView.
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
