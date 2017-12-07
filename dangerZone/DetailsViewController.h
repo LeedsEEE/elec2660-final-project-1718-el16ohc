@@ -10,7 +10,7 @@
 #import "equipment.h"
 
 @interface DetailsViewController : UIViewController
-// Outlets for all Labels and UIImageView.
+// Defines outlets for all Labels and UIImageView.
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *calibreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ammoLabel;
