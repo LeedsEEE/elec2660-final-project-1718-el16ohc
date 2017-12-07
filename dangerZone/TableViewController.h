@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "dataModel.h"
 #import "DetailsViewController.h"
+
 @interface TableViewController : UITableViewController
+// Data model object definition.
 @property (strong, nonatomic) dataModel *data;
 @end
