@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "equipment.h"
-
 @interface DetailsViewController : UIViewController
 // Outlets for all Labels and UIImageView.
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -17,5 +16,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *rangeLabel;
 @property (strong, nonatomic) equipment *equipment;
 @property (weak, nonatomic) IBOutlet UIImageView *pic;
-
 @end
