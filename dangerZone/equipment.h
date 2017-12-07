@@ -10,11 +10,10 @@
 #import <UIKit/UIKit.h>
 
 @interface equipment : NSObject
-
+// Defines properties for the data model.
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *calibre;
 @property (nonatomic, strong) NSString *ammo;
 @property (nonatomic, strong) NSString *range;
 @property (nonatomic, strong) UIImage *pic;
-
 @end
