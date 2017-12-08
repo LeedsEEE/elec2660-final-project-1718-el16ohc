@@ -95,6 +95,7 @@
         UIImage *dshkhmg_pic = [UIImage imageNamed:@"dshk_hmg.jpg"];
         dshkhmg.pic = dshkhmg_pic;
 // Initiating each object.
+        [self.equipment addObject:glock];
         [self.equipment addObject:tt33];
         [self.equipment addObject:akfourtyseven];
         [self.equipment addObject:akm];
