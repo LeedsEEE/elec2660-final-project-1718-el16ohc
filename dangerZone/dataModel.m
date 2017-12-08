@@ -1,0 +1,100 @@
+//
+//  dataModel.m
+//  dangerZone
+//
+//  Created by Oliver Chard [el16ohc] on 06/12/2017.
+//  Copyright © 2017 University of Leeds. All rights reserved.
+//
+
+#import "dataModel.h"
+
+@implementation dataModel
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+       self.equipment = [NSMutableArray array];
+        equipment *tt33 = [[equipment alloc] init];
+        tt33.name = @"TT-33 Tokarev";
+        tt33.calibre = @"7.62mm";
+        tt33.ammo = @"Ball";
+        tt33.range = @"50m";
+        UIImage *tt33_pic = [UIImage imageNamed:@"tt-33_tokarev.jpg"];
+        tt33.pic = tt33_pic;
+        self.equipment = [NSMutableArray array];
+        equipment *akfourtyseven = [[equipment alloc] init];
+        akfourtyseven.name = @"AK-47";
+        akfourtyseven.calibre = @"7.62mm";
+        akfourtyseven.ammo = @"Ball Tracer";
+        akfourtyseven.range = @"300m";
+        UIImage *akfourtyseven_pic = [UIImage imageNamed:@"ak-47.jpg"];
+        akfourtyseven.pic = akfourtyseven_pic;
+        self.equipment = [NSMutableArray array];
+        equipment *akm = [[equipment alloc] init];
+        akm.name = @"AKM";
+        akm.calibre = @"7.62mm";
+        akm.ammo = @"Ball Tracer";
+        akm.range = @"400m";
+        UIImage *akm_pic = [UIImage imageNamed:@"akm.jpg"];
+        akm.pic = akm_pic;
+        self.equipment = [NSMutableArray array];
+        equipment *rpklmg = [[equipment alloc] init];
+        rpklmg.name = @"RPK LMG";
+        rpklmg.calibre = @"7.62mm";
+        rpklmg.ammo = @"Ball Tracer";
+        rpklmg.range = @"600m";
+        UIImage *rpklmg_pic = [UIImage imageNamed:@"rpk_lmg.jpg"];
+        rpklmg.pic = rpklmg_pic;
+        self.equipment = [NSMutableArray array];
+        equipment *rpgeighteen = [[equipment alloc] init];
+        rpgeighteen.name = @"RPG-18";
+        rpgeighteen.calibre = @"64mm";
+        rpgeighteen.ammo = @"HEAT";
+        rpgeighteen.range = @"200m";
+        UIImage *rpgeighteen_pic = [UIImage imageNamed:@"rpg-18.jpg"];
+        rpgeighteen.pic = rpgeighteen_pic;
+        self.equipment = [NSMutableArray array];
+        equipment *rpgseven = [[equipment alloc] init];
+        rpgseven.name = @"RPG-7";
+        rpgseven.calibre = @"40mm";
+        rpgseven.ammo = @"HE";
+        rpgseven.range = @"920m";
+        UIImage *rpgseven_pic = [UIImage imageNamed:@"rpg-7.jpg"];
+        rpgseven.pic = rpgseven_pic;
+        self.equipment = [NSMutableArray array];
+        equipment *rpoa = [[equipment alloc] init];
+        rpoa.name = @"RPO-A";
+        rpoa.calibre = @"93mm";
+        rpoa.ammo = @"Thermobaric";
+        rpoa.range = @"1000m";
+        UIImage *rpoa_pic = [UIImage imageNamed:@"rpo-a.jpg"];
+        rpoa.pic = rpoa_pic;
+        self.equipment = [NSMutableArray array];
+        equipment *dragonov = [[equipment alloc] init];
+        dragonov.name = @"Dragonov";
+        dragonov.calibre = @"7.62mm";
+        dragonov.ammo = @"Ball";
+        dragonov.range = @"1300m";
+        UIImage *dragonov_pic = [UIImage imageNamed:@"dragunov.jpg"];
+        dragonov.pic = dragonov_pic;
+        self.equipment = [NSMutableArray array];
+        equipment *dshkhmg = [[equipment alloc] init];
+        dshkhmg.name = @"DsHK HMG";
+        dshkhmg.calibre = @"12.7mm";
+        dshkhmg.ammo = @"Ball Tracer";
+        dshkhmg.range = @"1500m";
+        UIImage *dshkhmg_pic = [UIImage imageNamed:@"dshk_hmg.jpg"];
+        dshkhmg.pic = dshkhmg_pic;
+        [self.equipment addObject:tt33];
+        [self.equipment addObject:akfourtyseven];
+        [self.equipment addObject:akm];
+        [self.equipment addObject:rpklmg];
+        [self.equipment addObject:rpgeighteen];
+        [self.equipment addObject:rpgseven];
+        [self.equipment addObject:rpoa];
+        [self.equipment addObject:dragonov];
+        [self.equipment addObject:dshkhmg];
+    }
+    return self;
+}
+@end
