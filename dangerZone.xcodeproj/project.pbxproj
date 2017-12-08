@@ -17,6 +17,7 @@
 		EA0ABE5E1FBF4760002B8C93 /* dangerZoneUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0ABE5D1FBF4760002B8C93 /* dangerZoneUITests.m */; };
 		EA0ABE6D1FBF49EF002B8C93 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0ABE6C1FBF49EF002B8C93 /* CoreLocation.framework */; };
 		EA0ABE6F1FBF5918002B8C93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0ABE6E1FBF5918002B8C93 /* MapKit.framework */; };
+		EA120EA91FDAAA6E00836CA2 /* glock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA120EA81FDAAA6E00836CA2 /* glock.jpg */; };
 		EA95151A1FD8643800386EEF /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9515191FD8643800386EEF /* DetailsViewController.m */; };
 		EA95151D1FD864AD00386EEF /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA95151C1FD864AD00386EEF /* TableViewController.m */; };
 		EA9515201FD8658C00386EEF /* equipment.m in Sources */ = {isa = PBXBuildFile; fileRef = EA95151F1FD8658C00386EEF /* equipment.m */; };
@@ -68,6 +69,7 @@
 		EA0ABE5F1FBF4760002B8C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0ABE6C1FBF49EF002B8C93 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EA0ABE6E1FBF5918002B8C93 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EA120EA81FDAAA6E00836CA2 /* glock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = glock.jpg; sourceTree = "<group>"; };
 		EA9515181FD8643800386EEF /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		EA9515191FD8643800386EEF /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		EA95151B1FD864AD00386EEF /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				EAA46BB91FD88D0200B222D0 /* rpk_lmg.jpg */,
 				EAA46BBA1FD88D0200B222D0 /* rpo-a.jpg */,
 				EAA46BBB1FD88D0200B222D0 /* tt-33_tokarev.jpg */,
+				EA120EA81FDAAA6E00836CA2 /* glock.jpg */,
 				EA0ABE381FBF475F002B8C93 /* Supporting Files */,
 			);
 			path = dangerZone;
@@ -314,6 +317,7 @@
 				EAA46BC21FD88D0200B222D0 /* rpk_lmg.jpg in Resources */,
 				EAA46BBF1FD88D0200B222D0 /* dshk_hmg.jpg in Resources */,
 				EAA46BBE1FD88D0200B222D0 /* dragunov.jpg in Resources */,
+				EA120EA91FDAAA6E00836CA2 /* glock.jpg in Resources */,
 				EAA46BC11FD88D0200B222D0 /* rpg-7.jpg in Resources */,
 				EAA46BC31FD88D0200B222D0 /* rpo-a.jpg in Resources */,
 				EAA46BBC1FD88D0200B222D0 /* ak-47.jpg in Resources */,
