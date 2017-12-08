@@ -71,6 +71,14 @@
         UIImage *akm_pic = [UIImage imageNamed:@"akm.jpg"];
         akm.pic = akm_pic;
         self.equipment = [NSMutableArray array];
+        equipment *lsw = [[equipment alloc] init];
+        lsw.name = @"LSW";
+        lsw.calibre = @"5.56mm";
+        lsw.ammo = @"Ball Tracer";
+        lsw.range = @"600m";
+        UIImage *lsw_pic = [UIImage imageNamed:@"lsw.jpg"];
+        lsw.pic = lsw_pic;
+        self.equipment = [NSMutableArray array];
         equipment *rpklmg = [[equipment alloc] init];
         rpklmg.name = @"RPK LMG";
         rpklmg.calibre = @"7.62mm";
@@ -142,6 +150,7 @@
         [self.equipment addObject:akfourtyseven];
         [self.equipment addObject:lmg];
         [self.equipment addObject:akm];
+        [self.equipment addObject:lsw];
         [self.equipment addObject:rpklmg];
         [self.equipment addObject:rpgeighteen];
         [self.equipment addObject:nlaw];
