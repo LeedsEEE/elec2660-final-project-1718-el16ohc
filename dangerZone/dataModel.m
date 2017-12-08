@@ -30,6 +30,14 @@
         tt33.range = @"50m";
         UIImage *tt33_pic = [UIImage imageNamed:@"tt-33_tokarev.jpg"];
         tt33.pic = tt33_pic;
+       self.equipment = [NSMutableArray array];
+        equipment *ugl = [[equipment alloc] init];
+        ugl.name = @"UGL";
+        ugl.calibre = @"40mm";
+        ugl.ammo = @"HE";
+        ugl.range = @"150m";
+        UIImage *ugl_pic = [UIImage imageNamed:@"ugl.jpg"];
+        ugl.pic = ugl_pic;
         self.equipment = [NSMutableArray array];
         equipment *akfourtyseven = [[equipment alloc] init];
         akfourtyseven.name = @"AK-47";
@@ -97,6 +105,7 @@
 // Initiating each object.
         [self.equipment addObject:glock];
         [self.equipment addObject:tt33];
+        [self.equipment addObject:ugl];
         [self.equipment addObject:akfourtyseven];
         [self.equipment addObject:akm];
         [self.equipment addObject:rpklmg];
