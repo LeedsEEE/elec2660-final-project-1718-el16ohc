@@ -127,6 +127,14 @@
         UIImage *l129a1_pic = [UIImage imageNamed:@"l129a1.jpg"];
         l129a1.pic = l129a1_pic;
         self.equipment = [NSMutableArray array];
+        equipment *l115a3 = [[equipment alloc] init];
+        l115a3.name = @"L115A3";
+        l115a3.calibre = @"8.59mm";
+        l115a3.ammo = @"Ball";
+        l115a3.range = @"1000m";
+        UIImage *l115a3_pic = [UIImage imageNamed:@"l115a3.jpg"];
+        l115a3.pic = l115a3_pic;
+        self.equipment = [NSMutableArray array];
         equipment *dragunov = [[equipment alloc] init];
         dragunov.name = @"Dragunov";
         dragunov.calibre = @"7.62mm";
@@ -165,6 +173,7 @@
         [self.equipment addObject:rpgseven];
         [self.equipment addObject:rpoa];
         [self.equipment addObject:l129a1];
+        [self.equipment addObject:l115a3];
         [self.equipment addObject:dragunov];
         [self.equipment addObject:gpmg];
         [self.equipment addObject:dshkhmg];
