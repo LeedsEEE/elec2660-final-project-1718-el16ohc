@@ -15,6 +15,14 @@
     if (self) {
 // Properties for each object.
        self.equipment = [NSMutableArray array];
+        equipment *glock = [[equipment alloc] init];
+        glock.name = @"Glock";
+        glock.calibre = @"9mm";
+        glock.ammo = @"Ball";
+        glock.range = @"50m";
+        UIImage *glock_pic = [UIImage imageNamed:@"glock.jpg"];
+        glock.pic = glock_pic;
+       self.equipment = [NSMutableArray array];
         equipment *tt33 = [[equipment alloc] init];
         tt33.name = @"TT-33 Tokarev";
         tt33.calibre = @"7.62mm";
