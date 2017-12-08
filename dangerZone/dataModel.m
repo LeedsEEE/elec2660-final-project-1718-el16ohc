@@ -151,6 +151,14 @@
         UIImage *gpmg_pic = [UIImage imageNamed:@"gpmg.jpg"];
         gpmg.pic = gpmg_pic;
         self.equipment = [NSMutableArray array];
+        equipment *gmg = [[equipment alloc] init];
+        gmg.name = @"GMG";
+        gmg.calibre = @"40mm";
+        gmg.ammo = @"HE";
+        gmg.range = @"1500m";
+        UIImage *gmg_pic = [UIImage imageNamed:@"gmg.jpg"];
+        gmg.pic = gmg_pic;
+        self.equipment = [NSMutableArray array];
         equipment *dshkhmg = [[equipment alloc] init];
         dshkhmg.name = @"DsHK HMG";
         dshkhmg.calibre = @"12.7mm";
@@ -176,6 +184,7 @@
         [self.equipment addObject:l115a3];
         [self.equipment addObject:dragunov];
         [self.equipment addObject:gpmg];
+        [self.equipment addObject:gmg];
         [self.equipment addObject:dshkhmg];
     }
     return self;
