@@ -13,18 +13,20 @@ NSArray *_pickerViewArray;
 @implementation ViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+// Initial hidden state for Labels and Buttons.
     self.map.hidden = true;
     self.mapButton.hidden = true;
     self.closeButton.hidden = true;
     self.map.delegate = self;
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
-    _pickerViewArray = @[@"Select Below", @"81mm Mortar", @"105mm Ground Burst", @"105mm Air Burst", @"Pistol", @"155mm Ground Burst", @"155mm Air Burst", @"UGL", @"RPG-18", @"AK-47", @"SA80 A2", @"AKM", @"LMG", @"ASM", @"LSM", @"RPK LMG", @"L129A1", @"N-LAW", @"LSW", @"RPG-18", @"GPMG", @"RPG-7", @"RPO-A", @"L115A3", @"Dragonov", @"DsHK HMG", @"GMG"];
+    _pickerViewArray = @[@"Select Below", @"81mm Mortar", @"105mm Ground Burst", @"105mm Air Burst", @"Pistol", @"155mm Ground Burst", @"155mm Air Burst", @"UGL", @"RPG-18", @"AK-47", @"SA80 A2", @"AKM", @"LMG", @"ASM", @"LSM", @"RPK LMG", @"L129A1", @"N-LAW", @"LSW", @"RPG-18", @"GPMG", @"RPG-7", @"RPO-A", @"L115A3", @"Dragunov", @"DsHK HMG", @"GMG", @"Tsar Bomba"];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 - (IBAction)goButton:(id)sender {
+// Holds text fields values for longitude and latitude.
     self.longitude = [self.longitudeTextField.text doubleValue];
     self.latitude = [self.latitudeTextField.text doubleValue];
     self.map.hidden = false;
@@ -34,6 +36,7 @@ NSArray *_pickerViewArray;
     self.infoButton.hidden = true;
 }
 - (IBAction)backgroundPressed:(id)sender {
+// Hides keyboard for background press.
     if ([self.longitudeTextField isFirstResponder]) {
         [self.longitudeTextField resignFirstResponder];
     }
@@ -42,7 +45,7 @@ NSArray *_pickerViewArray;
     }
 }
 - (IBAction)mapButton:(id)sender {
-
+// Action for each segment of segmented control.
     switch (((UISegmentedControl *) sender).selectedSegmentIndex) {
         case 0:
             self.map.mapType = MKMapTypeStandard ;
@@ -60,6 +63,7 @@ NSArray *_pickerViewArray;
 }
 // https://stackoverflow.com/questions/20591345/apple-mapkit-map-style-implement-style-change-using-segmented-controller
 - (IBAction)closeButton:(id)sender {
+// Changes hidden state on button press.
     self.map.hidden = true;
     self.mapButton.hidden = true;
     self.closeButton.hidden = true;
@@ -74,6 +78,7 @@ NSArray *_pickerViewArray;
     return YES;
 }
 - (MKOverlayRenderer *)mapView:(MKMapView *)map viewForOverlay:(id <MKOverlay>)overlay
+// Renders overlay for radius.
 {
     MKCircleRenderer *circleView = [[MKCircleRenderer alloc] initWithOverlay:overlay];
     circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
@@ -82,6 +87,7 @@ NSArray *_pickerViewArray;
 // https://stackoverflow.com/questions/9056451/draw-a-circle-of-1000m-radius-around-users-location-in-mkmapview
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     NSString *equipmentSelected = [_pickerViewArray objectAtIndex:row];
+// Properties in picker view.
     if ([equipmentSelected isEqualToString:@"Select Below"]) {
         NSArray *erase = [self.map overlays];
         [self.map removeOverlays:erase];
@@ -317,7 +323,7 @@ NSArray *_pickerViewArray;
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1000];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
-    if ([equipmentSelected isEqualToString:@"Dragonov"]) {
+    if ([equipmentSelected isEqualToString:@"Dragunov"]) {
         self.longitude = [self.longitudeTextField.text doubleValue];
         self.latitude = [self.latitudeTextField.text doubleValue];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
@@ -347,8 +353,19 @@ NSArray *_pickerViewArray;
         MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:1500];
         [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
     }
+    if ([equipmentSelected isEqualToString:@"Tsar Bomba"]) {
+        self.longitude = [self.longitudeTextField.text doubleValue];
+        self.latitude = [self.latitudeTextField.text doubleValue];
+        CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
+        self.map.region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.175, 0.175));
+        NSArray *erase = [self.map overlays];
+        [self.map removeOverlays:erase];
+        MKCircle *radius = [MKCircle circleWithCenterCoordinate:location.coordinate radius:3500];
+        [self.map addOverlay:radius level:MKOverlayLevelAboveRoads];
+    }
 }
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+// Cells for amount of array.
     return _pickerViewArray.count;
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {

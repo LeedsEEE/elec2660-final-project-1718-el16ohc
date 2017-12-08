@@ -13,6 +13,7 @@
 {
     self = [super init];
     if (self) {
+// Properties for each object.
        self.equipment = [NSMutableArray array];
         equipment *tt33 = [[equipment alloc] init];
         tt33.name = @"TT-33 Tokarev";
@@ -70,13 +71,13 @@
         UIImage *rpoa_pic = [UIImage imageNamed:@"rpo-a.jpg"];
         rpoa.pic = rpoa_pic;
         self.equipment = [NSMutableArray array];
-        equipment *dragonov = [[equipment alloc] init];
-        dragonov.name = @"Dragonov";
-        dragonov.calibre = @"7.62mm";
-        dragonov.ammo = @"Ball";
-        dragonov.range = @"1300m";
+        equipment *dragunov = [[equipment alloc] init];
+        dragunov.name = @"Dragunov";
+        dragunov.calibre = @"7.62mm";
+        dragunov.ammo = @"Ball";
+        dragunov.range = @"1300m";
         UIImage *dragonov_pic = [UIImage imageNamed:@"dragunov.jpg"];
-        dragonov.pic = dragonov_pic;
+        dragunov.pic = dragonov_pic;
         self.equipment = [NSMutableArray array];
         equipment *dshkhmg = [[equipment alloc] init];
         dshkhmg.name = @"DsHK HMG";
@@ -85,6 +86,7 @@
         dshkhmg.range = @"1500m";
         UIImage *dshkhmg_pic = [UIImage imageNamed:@"dshk_hmg.jpg"];
         dshkhmg.pic = dshkhmg_pic;
+// Initiating each object.
         [self.equipment addObject:tt33];
         [self.equipment addObject:akfourtyseven];
         [self.equipment addObject:akm];
@@ -92,7 +94,7 @@
         [self.equipment addObject:rpgeighteen];
         [self.equipment addObject:rpgseven];
         [self.equipment addObject:rpoa];
-        [self.equipment addObject:dragonov];
+        [self.equipment addObject:dragunov];
         [self.equipment addObject:dshkhmg];
     }
     return self;

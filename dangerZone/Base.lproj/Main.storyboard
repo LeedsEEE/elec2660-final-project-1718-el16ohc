@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ejf-LW-KBT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cpy-O5-gU0" id="eyW-GV-opv">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mlQ-lB-o1y">
@@ -114,45 +114,42 @@
                                     <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYu-vQ-pLq"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pJG-WU-zlG">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pJG-WU-zlG">
+                                <frame key="frameInset" width="465" height="766"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="396-ZL-FGw"/>
+                                    <constraint firstAttribute="height" constant="750" id="6mM-LK-1Sf"/>
+                                </constraints>
                             </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TQv-NR-a2D">
-                                <frame key="frameInset" minX="81" minY="70" width="212" height="29"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <segments>
-                                    <segment title="Standard"/>
-                                    <segment title="Satellite"/>
-                                    <segment title="Hybrid"/>
-                                </segments>
-                                <connections>
-                                    <action selector="mapButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="0i5-fE-jwW"/>
-                                </connections>
-                            </segmentedControl>
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hcx-RO-rNV">
                                 <frame key="frameInset" minY="291" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWg-z1-qJF">
-                                <frame key="frameInset" minX="339" minY="20" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xj-U8-zsi">
+                                <frame key="frameInset" minX="321" minY="617" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="KjN-Lo-MEA"/>
+                                    <constraint firstAttribute="height" constant="30" id="RZ8-bk-VJ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="i"/>
+                                <connections>
+                                    <action selector="infoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0d-he-Lpm"/>
+                                    <segue destination="5dU-J0-yFh" kind="show" id="8Yl-BP-kSM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWg-z1-qJF">
+                                <frame key="frameInset" minX="339" minY="74" width="20" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="D6I-2p-oAp"/>
+                                    <constraint firstAttribute="width" constant="20" id="ecn-O7-5TG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="closeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1P-1v-mGW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xj-U8-zsi">
-                                <frame key="frameInset" minX="321" minY="617" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                <state key="normal" title="i"/>
-                                <connections>
-                                    <action selector="infoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0d-he-Lpm"/>
-                                    <segue destination="ejf-LW-KBT" kind="show" id="OIg-PQ-rlu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -163,12 +160,15 @@
                             <constraint firstItem="ah1-n9-sbH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cpn-qt-Rxo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Sq-4L-udj" secondAttribute="trailing" constant="50" id="EDi-yd-e33"/>
                             <constraint firstItem="Hcx-RO-rNV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ele-Qi-Hic"/>
+                            <constraint firstItem="rWg-z1-qJF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="Sa7-9Q-I79"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1xj-U8-zsi" secondAttribute="bottom" constant="20" id="VpA-Ou-hpe"/>
                             <constraint firstItem="0Sq-4L-udj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="c9R-IF-JGt"/>
+                            <constraint firstItem="rWg-z1-qJF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ccu-Ec-X0W"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mts-vc-Yco" secondAttribute="trailing" constant="50" id="iRk-lX-fev"/>
                             <constraint firstItem="Hcx-RO-rNV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="275" id="mRu-6c-ULJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1xj-U8-zsi" secondAttribute="trailing" constant="10" id="nMN-ln-dYH"/>
                             <constraint firstItem="Mam-dy-rHJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="nnY-hY-NAG"/>
                             <constraint firstItem="YIF-k3-4mn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="o5N-KZ-kox"/>
-                            <constraint firstItem="TQv-NR-a2D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r3i-JK-Wdn"/>
                             <constraint firstItem="mts-vc-Yco" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="sBB-fH-odG"/>
                             <constraint firstItem="ah1-n9-sbH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="500" id="sHe-LW-bRg"/>
                             <constraint firstItem="CO3-W2-dY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="wJY-A3-HDz"/>
@@ -178,6 +178,22 @@
                             <action selector="backgroundPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u5w-5t-mFn"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="vdI-a5-bT8">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="TQv-NR-a2D">
+                            <rect key="frame" x="82" y="8" width="212" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <segments>
+                                <segment title="Standard"/>
+                                <segment title="Satellite"/>
+                                <segment title="Hybrid"/>
+                            </segments>
+                            <connections>
+                                <action selector="mapButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="0i5-fE-jwW"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="closeButton" destination="rWg-z1-qJF" id="iZz-Yv-0te"/>
                         <outlet property="infoButton" destination="1xj-U8-zsi" id="WV9-ao-Pb5"/>
@@ -190,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="976.79999999999995" y="122.78860569715144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Smu-Em-QDG">
@@ -201,12 +217,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="5dU-J0-yFh" kind="relationship" relationship="rootViewController" id="Wrd-wM-xME"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aG3-ab-dhl"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2v-WL-TEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982" y="123"/>
+            <point key="canvasLocation" x="116" y="123"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="R4w-7Q-uIJ">

@@ -9,5 +9,4 @@
 #import "equipment.h"
 
 @implementation equipment
-
 @end
