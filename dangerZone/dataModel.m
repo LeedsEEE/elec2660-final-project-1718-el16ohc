@@ -87,6 +87,14 @@
         UIImage *rpgeighteen_pic = [UIImage imageNamed:@"rpg-18.jpg"];
         rpgeighteen.pic = rpgeighteen_pic;
         self.equipment = [NSMutableArray array];
+        equipment *nlaw = [[equipment alloc] init];
+        nlaw.name = @"N-LAW";
+        nlaw.calibre = @"150mm";
+        nlaw.ammo = @"HE";
+        nlaw.range = @"600m";
+        UIImage *nlaw_pic = [UIImage imageNamed:@"n-law.jpg"];
+        nlaw.pic = nlaw_pic;
+        self.equipment = [NSMutableArray array];
         equipment *rpgseven = [[equipment alloc] init];
         rpgseven.name = @"RPG-7";
         rpgseven.calibre = @"40mm";
@@ -136,6 +144,7 @@
         [self.equipment addObject:akm];
         [self.equipment addObject:rpklmg];
         [self.equipment addObject:rpgeighteen];
+        [self.equipment addObject:nlaw];
         [self.equipment addObject:rpgseven];
         [self.equipment addObject:rpoa];
         [self.equipment addObject:l129a1];
