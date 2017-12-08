@@ -31,6 +31,15 @@
 		EAA46BC21FD88D0200B222D0 /* rpk_lmg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BB91FD88D0200B222D0 /* rpk_lmg.jpg */; };
 		EAA46BC31FD88D0200B222D0 /* rpo-a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BBA1FD88D0200B222D0 /* rpo-a.jpg */; };
 		EAA46BC41FD88D0200B222D0 /* tt-33_tokarev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAA46BBB1FD88D0200B222D0 /* tt-33_tokarev.jpg */; };
+		EAC98C1B1FDABED000F4AB41 /* ugl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAC98C1A1FDABED000F4AB41 /* ugl.jpg */; };
+		EAC98C1D1FDABEF100F4AB41 /* sa80_a2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAC98C1C1FDABEF100F4AB41 /* sa80_a2.jpg */; };
+		EAC98C1F1FDABF3D00F4AB41 /* lmg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAC98C1E1FDABF3D00F4AB41 /* lmg.jpg */; };
+		EAC98C211FDABF5800F4AB41 /* lsw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAC98C201FDABF5800F4AB41 /* lsw.jpg */; };
+		EAC98C231FDABF7100F4AB41 /* n-law.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAC98C221FDABF7100F4AB41 /* n-law.jpg */; };
+		EAC98C251FDABF9100F4AB41 /* l129a1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAC98C241FDABF9100F4AB41 /* l129a1.jpg */; };
+		EAC98C271FDABFAF00F4AB41 /* l115a3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAC98C261FDABFAF00F4AB41 /* l115a3.jpg */; };
+		EAC98C291FDABFC500F4AB41 /* gpmg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAC98C281FDABFC500F4AB41 /* gpmg.jpg */; };
+		EAC98C2B1FDABFD900F4AB41 /* gmg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAC98C2A1FDABFD900F4AB41 /* gmg.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +96,15 @@
 		EAA46BB91FD88D0200B222D0 /* rpk_lmg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rpk_lmg.jpg; sourceTree = "<group>"; };
 		EAA46BBA1FD88D0200B222D0 /* rpo-a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rpo-a.jpg"; sourceTree = "<group>"; };
 		EAA46BBB1FD88D0200B222D0 /* tt-33_tokarev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tt-33_tokarev.jpg"; sourceTree = "<group>"; };
+		EAC98C1A1FDABED000F4AB41 /* ugl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ugl.jpg; sourceTree = "<group>"; };
+		EAC98C1C1FDABEF100F4AB41 /* sa80_a2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sa80_a2.jpg; sourceTree = "<group>"; };
+		EAC98C1E1FDABF3D00F4AB41 /* lmg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lmg.jpg; sourceTree = "<group>"; };
+		EAC98C201FDABF5800F4AB41 /* lsw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lsw.jpg; sourceTree = "<group>"; };
+		EAC98C221FDABF7100F4AB41 /* n-law.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "n-law.jpg"; sourceTree = "<group>"; };
+		EAC98C241FDABF9100F4AB41 /* l129a1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = l129a1.jpg; sourceTree = "<group>"; };
+		EAC98C261FDABFAF00F4AB41 /* l115a3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = l115a3.jpg; sourceTree = "<group>"; };
+		EAC98C281FDABFC500F4AB41 /* gpmg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gpmg.jpg; sourceTree = "<group>"; };
+		EAC98C2A1FDABFD900F4AB41 /* gmg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gmg.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +184,15 @@
 				EAA46BBA1FD88D0200B222D0 /* rpo-a.jpg */,
 				EAA46BBB1FD88D0200B222D0 /* tt-33_tokarev.jpg */,
 				EA120EA81FDAAA6E00836CA2 /* glock.jpg */,
+				EAC98C1A1FDABED000F4AB41 /* ugl.jpg */,
+				EAC98C1C1FDABEF100F4AB41 /* sa80_a2.jpg */,
+				EAC98C1E1FDABF3D00F4AB41 /* lmg.jpg */,
+				EAC98C201FDABF5800F4AB41 /* lsw.jpg */,
+				EAC98C221FDABF7100F4AB41 /* n-law.jpg */,
+				EAC98C241FDABF9100F4AB41 /* l129a1.jpg */,
+				EAC98C261FDABFAF00F4AB41 /* l115a3.jpg */,
+				EAC98C281FDABFC500F4AB41 /* gpmg.jpg */,
+				EAC98C2A1FDABFD900F4AB41 /* gmg.jpg */,
 				EA0ABE381FBF475F002B8C93 /* Supporting Files */,
 			);
 			path = dangerZone;
@@ -312,19 +339,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC98C271FDABFAF00F4AB41 /* l115a3.jpg in Resources */,
+				EAC98C2B1FDABFD900F4AB41 /* gmg.jpg in Resources */,
 				EAA46BC01FD88D0200B222D0 /* rpg-18.jpg in Resources */,
 				EAA46BBD1FD88D0200B222D0 /* akm.jpg in Resources */,
+				EAC98C1B1FDABED000F4AB41 /* ugl.jpg in Resources */,
+				EAC98C251FDABF9100F4AB41 /* l129a1.jpg in Resources */,
 				EAA46BC21FD88D0200B222D0 /* rpk_lmg.jpg in Resources */,
+				EAC98C1D1FDABEF100F4AB41 /* sa80_a2.jpg in Resources */,
+				EAC98C231FDABF7100F4AB41 /* n-law.jpg in Resources */,
 				EAA46BBF1FD88D0200B222D0 /* dshk_hmg.jpg in Resources */,
+				EAC98C1F1FDABF3D00F4AB41 /* lmg.jpg in Resources */,
 				EAA46BBE1FD88D0200B222D0 /* dragunov.jpg in Resources */,
 				EA120EA91FDAAA6E00836CA2 /* glock.jpg in Resources */,
 				EAA46BC11FD88D0200B222D0 /* rpg-7.jpg in Resources */,
 				EAA46BC31FD88D0200B222D0 /* rpo-a.jpg in Resources */,
 				EAA46BBC1FD88D0200B222D0 /* ak-47.jpg in Resources */,
 				EA0ABE481FBF475F002B8C93 /* LaunchScreen.storyboard in Resources */,
+				EAC98C291FDABFC500F4AB41 /* gpmg.jpg in Resources */,
 				EA0ABE451FBF475F002B8C93 /* Assets.xcassets in Resources */,
 				EAA46BC41FD88D0200B222D0 /* tt-33_tokarev.jpg in Resources */,
 				EA0ABE431FBF475F002B8C93 /* Main.storyboard in Resources */,
+				EAC98C211FDABF5800F4AB41 /* lsw.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
