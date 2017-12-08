@@ -39,13 +39,13 @@
         UIImage *ugl_pic = [UIImage imageNamed:@"ugl.jpg"];
         ugl.pic = ugl_pic;
         self.equipment = [NSMutableArray array];
-        equipment *sa80a2 = [[equipment alloc] init];
-        sa80a2.name = @"SA80 A2";
-        sa80a2.calibre = @"5.56mm";
-        sa80a2.ammo = @"Ball Tracer";
-        sa80a2.range = @"300m";
-        UIImage *sa80a2_pic = [UIImage imageNamed:@"sa80a2.jpg"];
-        sa80a2.pic = sa80a2_pic;
+        equipment *sa80_a2 = [[equipment alloc] init];
+        sa80_a2.name = @"SA80 A2";
+        sa80_a2.calibre = @"5.56mm";
+        sa80_a2.ammo = @"Ball Tracer";
+        sa80_a2.range = @"300m";
+        UIImage *sa80_a2_pic = [UIImage imageNamed:@"sa80_a2.jpg"];
+        sa80_a2.pic = sa80_a2_pic;
         self.equipment = [NSMutableArray array];
         equipment *akfourtyseven = [[equipment alloc] init];
         akfourtyseven.name = @"AK-47";
@@ -115,6 +115,7 @@
         [self.equipment addObject:tt33];
         [self.equipment addObject:ugl];
         [self.equipment addObject:akfourtyseven];
+        [self.equipment addObject:sa80_a2];
         [self.equipment addObject:akm];
         [self.equipment addObject:rpklmg];
         [self.equipment addObject:rpgeighteen];
